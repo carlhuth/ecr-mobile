@@ -1,0 +1,13 @@
+#textsize a#textsize-medium{background-image: url(../images/textsize-medium.gif);background-position:top}
+#textsize a#textsize-large{background-image: url(../images/textsize-large.gif);background-position:bottom}
+#textsize a#textsize-extralarge{background-image: url(../images/textsize-extralarge.gif);background-position:top}
+
+#middle, #middle table tr td {font-size:13px !important;}
+#breadcrumb {font-size:12px !important;}
+#breadcrumb a{font-size:12px !important;}
+
+h1{font-size:28px !important;}
+#middle h2{font-size:14px !important;}
+#middle h3{font-size:16px !important;}
+
+
