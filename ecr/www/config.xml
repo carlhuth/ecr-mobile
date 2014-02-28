@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.phonegap.helloworld" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>ECR</name>
+    <description>
+        San Mateo Country ECR Route
+    </description>
+    <author email="petarbojinov@gmail.com" href="http://petarbojnov.com">
+        Petar Bojinov
+    </author>
+    <content src="index.html" />
+    <access origin="*" />
+</widget>

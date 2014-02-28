@@ -1,0 +1,16 @@
+<ons-page class="center">
+    <div ng-controller="MasterController">
+        <ons-list>
+            <ons-list-item ng-repeat="item in items" ng-click="showDetail($index)">
+                <ons-row>
+                    <ons-col class="left" size="10">
+                        {{item.stop}}
+                    </ons-col>
+                    <ons-col class="left">
+                        {{item.title}}
+                    </ons-col> 
+                </ons-row>
+            </ons-list-item>
+        </ons-list>
+    </div>
+</ons-page>

@@ -1,0 +1,18 @@
+<div class="page center" ng-controller="DetailController">
+    <ons-list>
+        <ons-list-item>
+            <ons-row>
+            	<ons-col>
+            		Northbound
+            	</ons-col>
+            </ons-row>
+        </ons-list-item>
+        <ons-list-item ng-repeat="item in item.northbound.weekday track by $index">
+            <ons-row>
+                <ons-col>
+                    {{item}}
+                </ons-col>
+            </ons-row>
+        </ons-list-item>
+    </ons-list>
+</div>
