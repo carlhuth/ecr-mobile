@@ -8,9 +8,26 @@
                     </ons-col>
                     <ons-col class="left">
                         {{item.title}}
-                    </ons-col> 
+                    </ons-col>
                 </ons-row>
             </ons-list-item>
         </ons-list>
     </div>
+
+    <ons-bottom-toolbar>
+        <ons-row>
+            <ons-col>
+                <ons-select ng-model="selectedValue">
+                    <option>Weekday</option>
+                    <option>Weekend</option>
+                </ons-select>
+            </ons-col>
+            <ons-col>
+                <ons-icon icon="exchange" size="2x">
+                </ons-icon>
+            </ons-col>
+        </ons-row>
+
+    </ons-bottom-toolbar>
+
 </ons-page>
