@@ -1,9 +1,5 @@
 <div class="page center" ng-controller="DetailController">
     <ons-list>
-        <ons-list-item>
-            <h2>{{item.title}}</h2>
-            <p>{{item.description}}</p>
-        </ons-list-item>
         <ons-list-item ng-repeat="item in item.northbound.weekday track by $index">
             <ons-row>
                 <ons-col class="left" size="10">
