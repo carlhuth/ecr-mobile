@@ -11,33 +11,37 @@
 select {
     width: 60%;
 }
-html, body, .onsen_screen-black-mask {
+.scroller {
     background-color: white !important;
 }
 /* Add responiveness to touch, press states */
  .button-enabled:active {
     background-color: #3D7BB3;
-    /* -webkit-transform: scale3d(0.8, 0.8, 1);
+    /*-webkit-transform: scale3d(0.8, 0.8, 1);
     transform: scale3d(0.8, 0.8, 1); */
 }
 .button-enabled:active i {
     color: white;
 }
 .topcoat-list__item:active {
+    /*
     background-color: #3D7BB3;
     color: white;
     -webkit-transition: all 0.20s ease-in-out;
     -moz-transition: all 0.20s ease-in-out;
     -ms-transition: all 0.20s ease-in-out;
     -o-transition: all 0.20s ease-in-out;
-    transition: all 0.20s ease-in-out;
+    transition: all 0.20s ease-in-out;*/
 }
 /*
 .button-enabled i {
 	color: white;
 } */
  .toolbars {
-    background-color: #D9E3E9 !important;
+    background-color: #D9E3E9;
+    z-index: 100;
+    height: 52px;
+    padding-top: 5px;
 }
 .toolbars i {
     color: #666;
@@ -46,7 +50,7 @@ html, body, .onsen_screen-black-mask {
     padding-top: 3px;
 }
 .toolbars select {
-	width: 100%;
+    width: 100%;
 }
 /* Not sure why onsen makes thigns non s */
  * {
@@ -57,4 +61,29 @@ html, body, .onsen_screen-black-mask {
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     -webkit-tap-highlight-color: transparent;
     /* For Some Android */
+}
+/* Draw circles around stop letter */
+ .stop > span {
+    border-radius: 50%;
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    padding: 10px;
+    width: 50px;
+    height: 50px;
+    position: relative;
+    z-index: 5;
+}
+.stop-connector {
+    background-color: #006BB6;
+    height: 78px;
+    width: 10px;
+    position: absolute;
+    left: 25px;
+    z-index: 0;
+}
+
+.topcoat-list__item .stop-connector:last-of-type {
+	height: 0px;
+	width: 0px;
 }
