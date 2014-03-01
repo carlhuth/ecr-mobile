@@ -11,6 +11,9 @@
 select {
     width: 60%;
 }
+html, body, .onsen_screen-black-mask {
+    background-color: white !important;
+}
 /* Add responiveness to touch, press states */
  .button-enabled:active {
     background-color: #3D7BB3;
@@ -33,22 +36,25 @@ select {
 .button-enabled i {
 	color: white;
 } */
-
-.toolbars {
-	background-color: #D9E3E9 !important;
+ .toolbars {
+    background-color: #D9E3E9 !important;
 }
-
 .toolbars i {
-	color: #666;
+    color: #666;
 }
-
+.toolbars .selector {
+    padding-top: 3px;
+}
+.toolbars select {
+	width: 100%;
+}
 /* Not sure why onsen makes thigns non s */
  * {
-  /*  -webkit-user-select: auto !important;
+    /*  -webkit-user-select: auto !important;
     -moz-user-select: auto !important;
     -ms-user-select: auto !important;
     user-select: auto !important;*/
-
-    -webkit-tap-highlight-color: rgba(0,0,0,0);
-    -webkit-tap-highlight-color: transparent; /* For Some Android */
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-tap-highlight-color: transparent;
+    /* For Some Android */
 }

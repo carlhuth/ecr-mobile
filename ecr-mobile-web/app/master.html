@@ -19,8 +19,8 @@
 
         <ons-bottom-toolbar class="toolbars">
             <ons-row>
-                <ons-col>
-                    <div ng-controller="TimeOfWeekController">
+                <ons-col size="75" align="left">
+                    <div class="selector" ng-controller="TimeOfWeekController">
                         <ons-select ng-model='form.type' required ng-options='option.value as option.name for option in typeOptions'></ons-select>
                     </div>
                 </ons-col>
