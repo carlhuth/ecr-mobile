@@ -12,6 +12,10 @@ function MasterController($scope, Data, Direction) {
     $scope.direction = Direction.get();
 }
 
+function DetailController($scope, Data){
+    $scope.item = Data.selectedItem;   
+}
+
 function TimeOfWeekController($scope) {
 
     $scope.typeOptions = [{
