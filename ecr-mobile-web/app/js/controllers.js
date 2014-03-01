@@ -1,4 +1,5 @@
 function MasterController($scope, Data, Direction) {
+
     $scope.items = Data.items;
 
     $scope.showDetail = function(index) {
@@ -15,6 +16,13 @@ function MasterController($scope, Data, Direction) {
         Direction.change();
         $scope.direction = Direction.get();
     }
+
+    $scope.$watch('direction', function(newValue, oldValue) {
+        if (newValue !== oldValue) {
+            console.log(newValue);
+            $scope.items = Data.items.reverse();
+        }
+    });
 }
 
 function DetailController($scope, Data, Direction) {

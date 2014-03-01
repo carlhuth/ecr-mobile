@@ -8,3 +8,11 @@ body {
 select {
 	width: 60%;
 }
+
+.button-enabled:active {
+	background-color: #666;
+}
+
+.button-enabled:active i {
+	color: white;
+}
