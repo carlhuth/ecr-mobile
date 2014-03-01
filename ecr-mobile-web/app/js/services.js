@@ -1,6 +1,6 @@
-var myApp = angular.module('myApp');
+var ECR = angular.module('ECR');
 
-myApp.factory('Direction', function() {
+ECR.factory('Direction', function() {
 
     var directions = ['Nortbound', 'Southbound'],
         currentDirection = directions[0];
@@ -21,7 +21,7 @@ myApp.factory('Direction', function() {
 });
 
 
-myApp.factory('Data', function() {
+ECR.factory('Data', function() {
     var data = {};
 
     data.items = [{
