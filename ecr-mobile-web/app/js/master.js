@@ -1,4 +1,4 @@
-function MasterController($scope, Data) {
+function MasterController($scope, Data, Direction) {
     $scope.items = Data.items;
 
     $scope.showDetail = function(index) {
@@ -9,10 +9,26 @@ function MasterController($scope, Data) {
         });
     }
 
-    // this doesn't work
-    $scope.selectedValue = 'Weekday';
+    $scope.direction = Direction.get();
+}
 
-    $scope.$watch('selectedValue', function(newValue, oldValue) {
-        console.log(newValue);
-    });
+function TimeOfWeekController($scope) {
+
+    $scope.typeOptions = [{
+        name: 'Weekday',
+        value: 'weekday'
+    }, {
+        name: 'Weekend',
+        value: 'weekend'
+    }, ];
+
+    $scope.form = {
+        type: $scope.typeOptions[0].value
+    };
+}
+
+function DirectionsController($scope, Direction) {
+    $scope.changeDirection = function() {
+        Direction.change();
+    }
 }
