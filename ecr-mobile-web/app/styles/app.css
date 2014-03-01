@@ -1,3 +1,6 @@
+/* samtrans logo dark blue #025299 */ 
+/* samtrans site header light blue #3D7BB3 */
+
 body {
 	color: white;
 	background-color: white;
@@ -9,10 +12,32 @@ select {
 	width: 60%;
 }
 
+/** Add responiveness to touch, press states
+**/
 .button-enabled:active {
-	background-color: #666;
+	background-color: #3D7BB3;
 }
 
 .button-enabled:active i {
 	color: white;
 }
+
+.topcoat-list__item:active {
+	background-color: #3D7BB3;
+	color: white;
+    -webkit-transition: all 0.20s ease-in-out;
+    -moz-transition: all 0.20s ease-in-out;
+    -ms-transition: all 0.20s ease-in-out;
+    -o-transition: all 0.20s ease-in-out;
+    transition: all 0.20s ease-in-out;
+}
+
+/*
+.button-enabled i {
+	color: white;
+}
+
+.toolbars {
+	background-color: #3D7BB3 !important;
+}
+*/

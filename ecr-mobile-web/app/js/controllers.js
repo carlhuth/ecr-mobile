@@ -39,32 +39,25 @@ function TimeOfWeekController($scope, Date) {
     // Depending on the day we chose which index of the opens to show
     // We will choose weekend if its Sunday or Saturday
     switch (day) {
-        // Sunday
-        case 0:
+        case 0: // Sunday
             whatsToday = 1;
             break;
-            // Monday
-        case 1:
+        case 1: // Monday
             whatsToday = 0;
             break;
-            // Tuesday
-        case 2:
+        case 2: // Tuesday
             whatsToday = 0;
             break;
-            // Wednesday
-        case 3:
+        case 3: // Wednesday
             whatsToday = 0;
             break;
-            // Thursday
-        case 4:
+        case 4: // Thursday
             whatsToday = 0;
             break;
-            // Friday
-        case 5:
+        case 5: // Friday
             whatsToday = 0;
             break;
-            // Saturday
-        case 6:
+        case 6: // Saturday
             whatsToday = 1;
             break;
         default:
