@@ -15,22 +15,23 @@
                 </ons-row>
             </ons-list-item>
         </ons-list>
+
+
+        <ons-bottom-toolbar>
+            <ons-row>
+                <ons-col>
+                    <div ng-controller="TimeOfWeekController">
+                        <ons-select ng-model='form.type' required ng-options='option.value as option.name for option in typeOptions'></ons-select>
+                    </div>
+                </ons-col>
+                <ons-col>
+                    <div ng-click="changeDirection()">
+                        <ons-icon icon="exchange" size="2x"></ons-icon>
+                    </div>
+                </ons-col>
+            </ons-row>
+
+        </ons-bottom-toolbar>
     </div>
-
-    <ons-bottom-toolbar>
-        <ons-row>
-            <ons-col>
-                <div ng-controller="TimeOfWeekController">
-                    <ons-select ng-model='form.type' required ng-options='option.value as option.name for option in typeOptions'></ons-select>
-                </div>
-            </ons-col>
-            <ons-col>
-                <div ng-controller="DirectionsController">
-                    <ons-icon ng-click="changeDirection()" icon="exchange" size="2x"></ons-icon>
-                </div>
-            </ons-col>
-        </ons-row>
-
-    </ons-bottom-toolbar>
 
 </ons-page>

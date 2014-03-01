@@ -14,7 +14,7 @@ myApp.factory('Direction', function() {
                 currentDirection = directions[1];
             }
             else if (currentDirection == directions[1]) {
-                currentDirection = directions[2];
+                currentDirection = directions[0];
             }
         }
     };

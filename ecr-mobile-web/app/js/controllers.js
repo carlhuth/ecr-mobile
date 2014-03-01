@@ -10,10 +10,16 @@ function MasterController($scope, Data, Direction) {
     }
 
     $scope.direction = Direction.get();
+
+    $scope.changeDirection = function() {
+        Direction.change();
+        $scope.direction = Direction.get();
+    }
 }
 
-function DetailController($scope, Data){
-    $scope.item = Data.selectedItem;   
+function DetailController($scope, Data, Direction) {
+    $scope.item = Data.selectedItem;
+    $scope.direction = Direction.get();
 }
 
 function TimeOfWeekController($scope) {
@@ -29,10 +35,4 @@ function TimeOfWeekController($scope) {
     $scope.form = {
         type: $scope.typeOptions[0].value
     };
-}
-
-function DirectionsController($scope, Direction) {
-    $scope.changeDirection = function() {
-        Direction.change();
-    }
 }
