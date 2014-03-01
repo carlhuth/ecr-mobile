@@ -1,6 +1,9 @@
 <ons-page class="center">
     <div ng-controller="MasterController">
         <ons-list>
+            <ons-row align="center">
+                <ons-col>{{direction}}</ons-col>
+            </ons-row>
             <ons-list-item ng-repeat="item in items" ng-click="showDetail($index)">
                 <ons-row>
                     <ons-col class="left" size="10">
@@ -8,9 +11,27 @@
                     </ons-col>
                     <ons-col class="left">
                         {{item.title}}
-                    </ons-col> 
+                    </ons-col>
                 </ons-row>
             </ons-list-item>
         </ons-list>
+
+
+        <ons-bottom-toolbar class="toolbars">
+            <ons-row>
+                <ons-col>
+                    <div ng-controller="TimeOfWeekController">
+                        <ons-select ng-model='form.type' required ng-options='option.value as option.name for option in typeOptions'></ons-select>
+                    </div>
+                </ons-col>
+                <ons-col>
+                    <div ng-click="changeDirection()" class="button-enabled">
+                        <ons-icon icon="exchange" size="2x"></ons-icon>
+                    </div>
+                </ons-col>
+            </ons-row>
+
+        </ons-bottom-toolbar>
     </div>
+
 </ons-page>

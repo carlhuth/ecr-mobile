@@ -1,43 +1,54 @@
-/* samtrans logo dark blue #025299 */ 
-/* samtrans site header light blue #3D7BB3 */
+/* samtrans logo dark blue #025299 */
 
-body {
-	color: white;
-	background-color: white;
+/* samtrans site header light blue #3D7BB3 */
+ body {
+    color: white;
+    background-color: white;
 }
 .left {
-	text-align: left;
+    text-align: left;
 }
 select {
-	width: 60%;
+    width: 60%;
 }
-
-/** Add responiveness to touch, press states
-**/
-.button-enabled:active {
-	background-color: #3D7BB3;
+/* Add responiveness to touch, press states */
+ .button-enabled:active {
+    background-color: #3D7BB3;
+    /* -webkit-transform: scale3d(0.8, 0.8, 1);
+    transform: scale3d(0.8, 0.8, 1); */
 }
-
 .button-enabled:active i {
-	color: white;
+    color: white;
 }
-
 .topcoat-list__item:active {
-	background-color: #3D7BB3;
-	color: white;
+    background-color: #3D7BB3;
+    color: white;
     -webkit-transition: all 0.20s ease-in-out;
     -moz-transition: all 0.20s ease-in-out;
     -ms-transition: all 0.20s ease-in-out;
     -o-transition: all 0.20s ease-in-out;
     transition: all 0.20s ease-in-out;
 }
-
 /*
 .button-enabled i {
 	color: white;
-}
+} */
 
 .toolbars {
-	background-color: #3D7BB3 !important;
+	background-color: #D9E3E9 !important;
 }
-*/
+
+.toolbars i {
+	color: #666;
+}
+
+/* Not sure why onsen makes thigns non s */
+ * {
+  /*  -webkit-user-select: auto !important;
+    -moz-user-select: auto !important;
+    -ms-user-select: auto !important;
+    user-select: auto !important;*/
+
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-tap-highlight-color: transparent; /* For Some Android */
+}
