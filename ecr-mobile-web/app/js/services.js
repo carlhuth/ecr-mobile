@@ -10,18 +10,35 @@ ECR.factory('Direction', function() {
             return currentDirection;
         },
         change: function() {
+            // swap the dates
             if (currentDirection == directions[0]) {
                 currentDirection = directions[1];
-            }
-            else if (currentDirection == directions[1]) {
+            } else if (currentDirection == directions[1]) {
                 currentDirection = directions[0];
             }
         }
     };
 });
 
+ECR.factory('Date', function() {
+    var date = new Date(),
+        day = date.getDay(), //returns a number between 0-6
+        timeOfTheWeek = '';
 
-ECR.factory('Data', function() {
+    return {
+        getDay: function() {
+            return day;
+        },
+        setTimeOfTheWeek: function (theTimeOfTheWeek) {
+            timeOfTheWeek = theTimeOfTheWeek;
+        },
+        getTimeOfTheWeek: function () {
+            return timeOfTheWeek;
+        }
+    };
+});
+
+ECR.factory('RouteData', function() {
     var data = {};
 
     data.items = [{

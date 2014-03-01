@@ -1,10 +1,10 @@
-function MasterController($scope, Data, Direction) {
+function MasterController($scope, RouteData, Direction) {
 
-    $scope.items = Data.items;
+    $scope.items = RouteData.items;
 
     $scope.showDetail = function(index) {
-        var selectedItem = Data.items[index];
-        Data.selectedItem = selectedItem;
+        var selectedItem = RouteData.items[index];
+        RouteData.selectedItem = selectedItem;
         $scope.ons.navigator.pushPage('../detail.html', {
             title: selectedItem.title
         });
@@ -20,56 +20,56 @@ function MasterController($scope, Data, Direction) {
     $scope.$watch('direction', function(newValue, oldValue) {
         if (newValue !== oldValue) {
             console.log(newValue);
-            $scope.items = Data.items.reverse();
+            $scope.items = RouteData.items.reverse();
         }
     });
 }
 
-function DetailController($scope, Data, Direction) {
-    $scope.item = Data.selectedItem;
+function DetailController($scope, RouteData, Direction) {
+    $scope.item = RouteData.selectedItem;
     $scope.direction = Direction.get();
 }
 
-function TimeOfWeekController($scope) {
+function TimeOfWeekController($scope, Date) {
 
-    var date = new Date(),
-        day = date.getDay(), //returns a number between 0-6
-        whatsToday = 0;
+    var day = Date.getDay(),
+        whatsToday = 0,
+        timeOfTheWeek = '';
 
     // Depending on the day we chose which index of the opens to show
     // We will choose weekend if its Sunday or Saturday
-    switch(day) {
+    switch (day) {
         // Sunday
         case 0:
             whatsToday = 1;
             break;
-        // Monday
-        case 1: 
+            // Monday
+        case 1:
             whatsToday = 0;
             break;
-        // Tuesday
-        case 2: 
+            // Tuesday
+        case 2:
             whatsToday = 0;
             break;
-        // Wednesday
-        case 3: 
+            // Wednesday
+        case 3:
             whatsToday = 0;
             break;
-        // Thursday
-        case 4:  
+            // Thursday
+        case 4:
             whatsToday = 0;
             break;
-        // Friday
-        case 5: 
+            // Friday
+        case 5:
             whatsToday = 0;
             break;
-        // Saturday
+            // Saturday
         case 6:
             whatsToday = 1;
             break;
         default:
             // If date broke and we dont have a match, lets assume its a weekday
-            whatsToday = 0; 
+            whatsToday = 0;
             break;
     }
 
@@ -81,7 +81,12 @@ function TimeOfWeekController($scope) {
         value: 'weekend'
     }];
 
+    timeOfTheWeek = $scope.typeOptions[whatsToday].value;
+
+    // save the global state so other controller can access it
+    Date.setTimeOfTheWeek(timeOfTheWeek); 
+
     $scope.form = {
-        type: $scope.typeOptions[whatsToday].value
+        type: timeOfTheWeek
     };
 }
