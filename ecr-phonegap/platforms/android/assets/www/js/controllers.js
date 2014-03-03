@@ -26,8 +26,19 @@ function MasterController($scope, RouteData, Direction) {
 }
 
 function DetailController($scope, RouteData, Direction) {
-    $scope.item = RouteData.selectedItem;
-    $scope.direction = Direction.get();
+    //need to pass back the exact north/south and weekday/weekend here
+    //the template will then display this
+    var direction =  Direction.get().toLowerCase(),
+        routeDataContainer = RouteData.selectedItem;
+
+    console.log(direction, typeof direction);
+
+    $scope.direction = direction;
+    $scope.item = routeDataContainer;
+
+    console.log(routeDataContainer);
+    window.selectedItem = routeDataContainer;
+    
 }
 
 function TimeOfWeekController($scope, Date) {
@@ -77,7 +88,7 @@ function TimeOfWeekController($scope, Date) {
     timeOfTheWeek = $scope.typeOptions[whatsToday].value;
 
     // save the global state so other controller can access it
-    Date.setTimeOfTheWeek(timeOfTheWeek); 
+    Date.setTimeOfTheWeek(timeOfTheWeek);
 
     $scope.form = {
         type: timeOfTheWeek

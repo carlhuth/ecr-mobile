@@ -52,7 +52,8 @@ select {
 .toolbars select {
     width: 100%;
 }
-/* Not sure why onsen makes thigns non s */
+
+/* Can this be causing nexus 4 clicking to not work? */
  * {
     /*  -webkit-user-select: auto !important;
     -moz-user-select: auto !important;
@@ -62,6 +63,7 @@ select {
     -webkit-tap-highlight-color: transparent;
     /* For Some Android */
 }
+
 /* Draw circles around stop letter */
  .stop > span {
     border-radius: 50%;
@@ -83,7 +85,4 @@ select {
     z-index: 0;
 }
 
-.topcoat-list__item .stop-connector:last-of-type {
-	height: 0px;
-	width: 0px;
-}
+/* Find a way to get rid of the bottom part of the last circle
